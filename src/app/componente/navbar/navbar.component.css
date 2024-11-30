@@ -41,7 +41,7 @@ button {
   width: 100%;
   z-index: 1000; /* Asegura que esté por encima del contenido */
   display: flex;
-  background-color: #1976d2; /* Color de fondo para la barra de navegación */
+  background-color: whitesmoke; /* Color de fondo para la barra de navegación */
   padding: 0 16px; /* Espaciado alrededor */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle más contraste */
 }
@@ -55,7 +55,7 @@ button {
 span {
   margin: auto;
   text-align: center;
-  color: white; /* Asegura que el texto sea visible */
+  color: black; /* Cambié a negro para que se vea bien en un fondo claro */
 }
 
 /* Spacer entre los elementos de la barra */
@@ -72,12 +72,14 @@ button {
 /* Ajuste del contenido para que no se sobreponga a la barra de navegación */
 .content {
   padding-top: 75px; /* Asegúrate de que este valor coincida con la altura de tu barra */
+  transition: margin-left 0.3s ease; /* Agregado para una transición suave */
 }
 
 /* Estilos adicionales para el sidenav */
 mat-sidenav-container {
   display: flex;
   height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+  position: relative;
 }
 
 mat-sidenav {
