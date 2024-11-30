@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import {MatToolbar, MatToolbarRow} from "@angular/material/toolbar";
 import {MatButton, MatIconButton} from "@angular/material/button";
 import {RouterLink} from "@angular/router";
 import {MatIcon} from '@angular/material/icon';
+import { MatSidenav } from '@angular/material/sidenav';
 import {MatSidenavContainer} from '@angular/material/sidenav';
 
 @Component({
@@ -15,7 +16,8 @@ import {MatSidenavContainer} from '@angular/material/sidenav';
     MatToolbarRow,
     MatIconButton,
     MatIcon,
-    MatSidenavContainer
+    MatSidenavContainer,
+    MatSidenav
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
