@@ -67,11 +67,12 @@ button {
 
 .content {
   padding-top: 75px;
+  transition: margin-left 0.3s ease; /* Desplazamiento suave cuando el sidenav se abre */
+  margin-left: 0; /* Ajuste para cuando el sidenav esté cerrado */
 }
 
-mat-sidenav-container {
-  display: flex;
-  /*height: 100vh;*/
+.sidenav-container {
+  height: 100vh; /* Ocupa toda la altura de la ventana */
 }
 
 mat-sidenav {
@@ -79,15 +80,20 @@ mat-sidenav {
   background-color: #f4f4f4;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
-mat-sidenav button {
-  width: 100%;
-  margin-bottom: 10px;
+  z-index: 999; /* Asegura que el sidenav esté sobre el contenido */
 }
 
 mat-sidenav-content {
-  flex: 1;
-  background-color: #e9ecef;
+  background-color: #e9ecef; /* Fondo del contenido */
   padding: 20px;
+}
+
+/* Cuando el sidenav está en modo "over", cubre el contenido */
+mat-sidenav.mat-drawer-opened {
+  z-index: 1001;
+}
+
+/* Cuando el sidenav está abierto, el contenido se mueve para que el sidenav no lo cubra */
+mat-sidenav-container.mat-drawer-opened .content {
+  margin-left: 250px; /* Ajuste según el ancho del sidenav */
 }
