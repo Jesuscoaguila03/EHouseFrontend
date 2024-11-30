@@ -18,14 +18,8 @@
 <!-- Resto del contenido de la página -->
 <div class="content">
   <!-- Aquí va el contenido de la página -->
-</div>
-<!--
-importar en styles.css el siguiente código:
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
-para activar los colores: primary (azul), accent(rosado) y warn (rojo)
--->
-<mat-sidenav-container>
-  <mat-sidenav #sidenav mode="side" position="start">
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" position="start">
       <button mat-raised-button [routerLink]="'/usuarios'">Usuarios</button>
       <button mat-raised-button [routerLink]="'/new-usuario'">Nuevo Usuario</button>
       <button mat-raised-button [routerLink]="'/hoteles'">Hoteles</button>
@@ -38,5 +32,12 @@ para activar los colores: primary (azul), accent(rosado) y warn (rojo)
       <button mat-raised-button [routerLink]="'/new-resenia'">Nueva Resenia</button>
       <button mat-raised-button [routerLink]="'/numero-habitaciones'">Nro Habitaciones</button>
       <button mat-raised-button [routerLink]="'/habFavorita'">Habitacion Fav.</button>
-  </mat-sidenav>
-></mat-sidenav-container>
+    </mat-sidenav>
+    ></mat-sidenav-container>
+</div>
+<!--
+importar en styles.css el siguiente código:
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+para activar los colores: primary (azul), accent(rosado) y warn (rojo)
+-->
+
