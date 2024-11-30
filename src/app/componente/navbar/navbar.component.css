@@ -1,11 +1,11 @@
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
+/*@import '@angular/material/prebuilt-themes/indigo-pink.css';
 
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Asegura que esté por encima del contenido */
+  z-index: 1000; /* Asegura que esté por encima del contenido
   display: flex;
 }
 
@@ -27,5 +27,73 @@ button {
   margin: 0px 2px;
 }
 .content{
-  margin-top: 75px;/* Ajusta según la altura de tu toolbar */
+  margin-top: 75px;/* Ajusta según la altura de tu toolbar
+}
+*/
+/* Asegura que el tema de Angular Material se aplica correctamente */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* Barra de navegación */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que esté por encima del contenido */
+  display: flex;
+  background-color: #1976d2; /* Color de fondo para la barra de navegación */
+  padding: 0 16px; /* Espaciado alrededor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle más contraste */
+}
+
+/* Estilos para el botón "Home" */
+#h {
+  background-color: gold;
+}
+
+/* Centrando el nombre */
+span {
+  margin: auto;
+  text-align: center;
+  color: white; /* Asegura que el texto sea visible */
+}
+
+/* Spacer entre los elementos de la barra */
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+/* Estilo para los botones */
+button {
+  text-align: center;
+  margin: 0px 2px;
+}
+
+/* Ajuste del contenido para que no se sobreponga a la barra de navegación */
+.content {
+  padding-top: 75px; /* Asegúrate de que este valor coincida con la altura de tu barra */
+}
+
+/* Estilos adicionales para el sidenav */
+mat-sidenav-container {
+  display: flex;
+  height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+}
+
+mat-sidenav {
+  width: 250px; /* Ancho del sidenav */
+  background-color: #f4f4f4; /* Fondo claro para el menú lateral */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+mat-sidenav button {
+  width: 100%; /* Hace que los botones ocupen todo el ancho */
+  margin-bottom: 10px; /* Espaciado entre los botones */
+}
+
+mat-sidenav-content {
+  flex: 1;
+  background-color: #e9ecef; /* Fondo del contenido */
+  padding: 20px;
 }
