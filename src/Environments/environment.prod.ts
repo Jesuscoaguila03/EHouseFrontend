@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://ehouse-backend.onrender.com',
+  apiUrl: 'https://ehouse-backend.onrender.com',
 }
