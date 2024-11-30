@@ -25,4 +25,10 @@ import {MatSidenavContainer} from '@angular/material/sidenav';
 export class NavbarComponent {
   title = 'House-Jesus';
   nombre: string = '!';
+
+  @ViewChild('sidenav') sidenav!: MatSidenav;
+
+  toggleSidenav() {
+    this.sidenav.toggle();
+  }
 }
