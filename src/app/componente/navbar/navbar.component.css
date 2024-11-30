@@ -70,3 +70,9 @@ button {
 .content {
   margin-top: 75px; /* Ajusta según la altura de tu toolbar */
 }
+
+/* Estilos para el contenedor del sidenav */
+.sidenav-container {
+  height: 100%;
+  margin-top: 75px; /* Ajusta según la altura de tu toolbar */
+}

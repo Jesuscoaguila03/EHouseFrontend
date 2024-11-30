@@ -29,7 +29,7 @@
 <mat-toolbar class="header">
   <mat-toolbar-row>
     <!-- icono de hamburguesa para abrir el menú -->
-    <button mat-icon-button (click)="sidenav.toggle()" id="menuBurguer">
+    <button mat-icon-button (click)="toggleSidenav()" id="menuBurguer">
       <mat-icon>menu</mat-icon>
     </button>
     <img class="nav__logo" src="images/icon-House.png" width="auto" height="50px" />
@@ -39,7 +39,7 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-sidenav-container>
+<mat-sidenav-container class="sidenav-container">
   <mat-sidenav #sidenav mode="over" position="start">
     <button mat-raised-button [routerLink]="'/usuarios'">Usuarios</button>
     <button mat-raised-button [routerLink]="'/new-usuario'">Nuevo Usuario</button>
@@ -57,6 +57,43 @@
   <mat-sidenav-content>
     <!-- Resto del contenido de la página -->
     <div class="content">
+      <main>
+        <section class="container" id="home">
+          <div class="container__leading">
+            <h2 class="title">
+              <p>Bienvenidos a </p>
+              <p id="second"> EHOUSE </p>
+              <p> Te acompañamos en tu siguiente aventura </p>
+            </h2>
+          </div>
+        </section>
+        <section class="container" id="about-us">
+          <div class="about__leading">
+            <h2>Acerca de</h2>
+          </div>
+          <div class="about__content">
+            <p>
+              <b>EHouse</b> se presenta como una plataforma web innovadora destinada a transformar la experiencia de
+              reserva de alojamiento. En un mundo donde las opciones para alquilar casas y departamentos son
+              abundantes, EHouse se distingue por ofrecer una solución integral que aborda las necesidades y
+              desafíos actuales de los viajeros.
+            </p>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <section>
+          &copy; EHouse - Todos los derechos reservados 2024
+        </section>
+        <section class="footer_item">
+          <a class="footer_link" href="#" target="_blank">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a class="footer_link" href="#" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </section>
+      </footer>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
