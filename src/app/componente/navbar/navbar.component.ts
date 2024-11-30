@@ -4,7 +4,7 @@ import {MatButton, MatIconButton} from "@angular/material/button";
 import {RouterLink} from "@angular/router";
 import {MatIcon} from '@angular/material/icon';
 import { MatSidenav } from '@angular/material/sidenav';
-import {MatSidenavContainer} from '@angular/material/sidenav';
+import {MatSidenavContainer, MatSidenavContent} from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-navbar',
@@ -17,7 +17,8 @@ import {MatSidenavContainer} from '@angular/material/sidenav';
     MatIconButton,
     MatIcon,
     MatSidenavContainer,
-    MatSidenav
+    MatSidenav,
+    MatSidenavContent
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
