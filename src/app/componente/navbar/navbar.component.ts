@@ -22,5 +22,5 @@ import {MatSidenavContainer} from '@angular/material/sidenav';
 })
 export class NavbarComponent {
   title = 'House-Jesus';
-  nombre: string = 'Grupo 3';
+  nombre: string = '!';
 }
