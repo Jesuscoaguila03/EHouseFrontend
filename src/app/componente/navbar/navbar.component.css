@@ -39,63 +39,55 @@ button {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Asegura que esté por encima del contenido */
+  z-index: 1000;
   display: flex;
-  background-color: whitesmoke; /* Color de fondo para la barra de navegación */
-  padding: 0 16px; /* Espaciado alrededor */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle más contraste */
+  background-color: whitesmoke;
+  padding: 0 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para el botón "Home" */
 #h {
   background-color: gold;
 }
 
-/* Centrando el nombre */
 span {
   margin: auto;
   text-align: center;
-  color: black; /* Cambié a negro para que se vea bien en un fondo claro */
+  color: black;
 }
 
-/* Spacer entre los elementos de la barra */
 .example-spacer {
   flex: 1 1 auto;
 }
 
-/* Estilo para los botones */
 button {
   text-align: center;
   margin: 0px 2px;
 }
 
-/* Ajuste del contenido para que no se sobreponga a la barra de navegación */
 .content {
-  padding-top: 75px; /* Asegúrate de que este valor coincida con la altura de tu barra */
-  transition: margin-left 0.3s ease; /* Agregado para una transición suave */
+  padding-top: 75px;
 }
 
-/* Estilos adicionales para el sidenav */
 mat-sidenav-container {
   display: flex;
-  height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
-  position: relative;
+  height: 100vh;
 }
 
 mat-sidenav {
-  width: 250px; /* Ancho del sidenav */
-  background-color: #f4f4f4; /* Fondo claro para el menú lateral */
+  width: 250px;
+  background-color: #f4f4f4;
   padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 mat-sidenav button {
-  width: 100%; /* Hace que los botones ocupen todo el ancho */
-  margin-bottom: 10px; /* Espaciado entre los botones */
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 mat-sidenav-content {
   flex: 1;
-  background-color: #e9ecef; /* Fondo del contenido */
+  background-color: #e9ecef;
   padding: 20px;
 }
