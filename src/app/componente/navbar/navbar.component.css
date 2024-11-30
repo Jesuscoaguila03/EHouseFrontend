@@ -30,70 +30,196 @@ button {
   margin-top: 75px;/* Ajusta según la altura de tu toolbar
 }
 */
-/* Asegura que el tema de Angular Material se aplica correctamente */
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-/* Barra de navegación */
+:root {
+  --color-main: #f8f8f8;
+  --color-secondary: rgb(0, 41, 60);
+  --color-third: rgb(27, 82, 107);
+  --color-text: #222831;
+  --color-text-opacity: rgba(33, 39, 48, 0.8);
+  --color-header-gradient: rgba(248, 248, 248, 0.8);
+  --font-main: 'Roboto', 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background: var(--color-main);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* ****************** Scroll ************** */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--color-text);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  box-shadow: 0 0 2px 1px var(--color-secondary);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-main);
+}
+
+/* ************* Header ************* */
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+  z-index: 1;
+  background: var(--color-main);
+}
+
+.nav {
   display: flex;
-  background-color: whitesmoke;
-  padding: 0 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  padding: 0.5rem 1rem;
 }
 
-#h {
-  background-color: gold;
+.nav__logo {
+  padding: 0.5rem 0;
 }
 
-span {
-  margin: auto;
+/* ***************** Menu Dropdown ****************** */
+.menu__dropdown {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  border-top: 2px solid;
+  position: fixed;
+  top: 92px;
+  left: 0px;
+  height: calc(100vh - 92px);
+  background: var(--color-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease-in-out;
+}
+
+.menu__dropdown.menu-disabled {
+  transform: translateX(100%);
+}
+
+.menu__list {
+  padding: 0.5rem 0;
+  margin: 0;
   text-align: center;
-  color: black;
+  width: 100%;
+  transition: all 0.5s ease-in;
 }
 
-.example-spacer {
-  flex: 1 1 auto;
+.menu__item {
+  transition: all 0.3s ease-in;
+  text-decoration: none;
+  font-family: var(--font-main);
+  color: var(--color-text);
+  font-weight: 500;
+  display: block;
+  margin: 0rem 0.5rem;
+  padding: 0.5rem;
 }
 
-button {
-  text-align: center;
-  margin: 0px 2px;
+.menu__item:hover {
+  border-bottom: 0.25rem solid var(--color-secondary);
+  cursor: pointer;
 }
 
-.content {
-  padding-top: 75px;
-  transition: margin-left 0.3s ease; /* Desplazamiento suave cuando el sidenav se abre */
-  margin-left: 0; /* Ajuste para cuando el sidenav esté cerrado */
+.menu__item.menu__button {
+  border-bottom: none;
+  color: var(--color-main);
+  border-radius: 10px;
+  background: var(--color-text);
+  padding: 0.5rem 2rem;
+  cursor: pointer;
 }
 
-.sidenav-container {
-  height: 100vh; /* Ocupa toda la altura de la ventana */
+.menu__item.menu__button:hover {
+  background: var(--color-third);
 }
 
-mat-sidenav {
-  width: 250px;
-  background-color: #f4f4f4;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  z-index: 999; /* Asegura que el sidenav esté sobre el contenido */
+.fas {
+  margin-left: 0.3em;
+  font-size: 1em;
+  align-self: center;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
 
-mat-sidenav-content {
-  background-color: #e9ecef; /* Fondo del contenido */
-  padding: 20px;
+.fas:hover {
+  opacity: 0.8;
 }
 
-/* Cuando el sidenav está en modo "over", cubre el contenido */
-mat-sidenav.mat-drawer-opened {
-  z-index: 1001;
+/* ************** Footer *************** */
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-secondary);
+  color: var(--color-main);
 }
 
-/* Cuando el sidenav está abierto, el contenido se mueve para que el sidenav no lo cubra */
-mat-sidenav-container.mat-drawer-opened .content {
-  margin-left: 250px; /* Ajuste según el ancho del sidenav */
+/* Responsive Design */
+@media (max-width: 1023px) {
+  #menuBurguer {
+    display: block; /* Mostrar el ícono de hamburguesa en pantallas pequeñas */
+  }
+
+  .menu__dropdown {
+    display: none; /* Ocultar el dropdown en pantallas pequeñas */
+  }
+
+  .menu__dropdown.menu-disabled {
+    transform: translateX(100%);
+  }
+
+  /* Ajustar el sidenav */
+  .content {
+    margin-left: 0; /* Evitar margen extra cuando el sidenav está abierto */
+  }
 }
+
+@media (min-width: 1024px) {
+  /* Ajuste para dispositivos grandes */
+  .menu__dropdown {
+    display: flex;
+    flex-direction: row;
+    position: initial;
+    height: auto;
+    background: transparent;
+    gap: 1rem;
+    width: auto;
+    padding: 0;
+    border-top: 0px;
+  }
+
+  #menuBurguer {
+    display: none;
+  }
+
+  .services__cards {
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+  }
+}
+
